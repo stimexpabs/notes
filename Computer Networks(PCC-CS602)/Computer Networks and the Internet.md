@@ -24,3 +24,8 @@
 
 	### 1.1.3 **what is a protocol?**
 	- A network protocol is similar to a human protocol(how we behave and communicate with each other), except that the entities exchanging messages and taking actions are hardware or software components of some device.
+	- hardware implemented protocols in two physically connected computers control the flow of bits on the wire between the two network interface cards.
+	- congestion-control protocols in end systems control the rate at which packets are transmitted between sender and receiver
+	- protocols in routers determine a packet's path form source to destination
+	- __*A Protocol defines the format and the order of messeges exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.*__
+	- 
