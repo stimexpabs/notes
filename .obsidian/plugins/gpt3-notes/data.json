@@ -1,0 +1,52 @@
+{
+  "appName": "GP3_NOTES",
+  "token": "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",
+  "model": "gpt-3.5-turbo-0301",
+  "tokens": 300,
+  "temperature": 0,
+  "promptHistory": [
+    {
+      "prompt": "write about TCP protocol and how to implement a server that can handel upto 3 clients and a client that that can recieve real time text data from server.",
+      "processedPrompt": "write about TCP protocol and how to implement a server that can handel upto 3 clients and a client that that can recieve real time text data from server.",
+      "temperature": 0,
+      "tokens": 300
+    },
+    {
+      "prompt": "write a tcp server program in C language that can connect to multiple client program and can chat with those client programs.",
+      "processedPrompt": "write a tcp server program in C language that can connect to multiple client program and can chat with those client programs.",
+      "temperature": 0,
+      "tokens": 300
+    },
+    {
+      "prompt": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <sys/socket.h>\n#include <arpa/inet.h>\n#include <unistd.h>\n// Define the port number and buffer size:\n#define PORT 8080\n#define BUFFER_SIZE 1024\n// Create a socket:\nint server_socket = socket(AF_INET, SOCK_STREAM, 0);\n// Bind the socket to a specific IP address and port number:\nstruct sockaddr_in server_address;\nserver_address.sin_family = AF_INET;\nserver_address.sin_addr.s_addr = INADDR_ANY;\nserver_address.sin_port = htons(PORT);\n\nbind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address));\n// Listen for incoming connections:\nlisten(server_socket, 5);\n//Accept incoming connections and create a new socket for each client:\nint client_socket;\nstruct sockaddr_in client_address;\nint client_address_length = sizeof(client_address);\n\nwhile ((client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t *)&client_address_length))) {\n    // create a new thread to handle the client\n}\n\n// Handle the client in a separate thread:\nvoid *handle_client(void *arg) {\n    int client_socket = *(int *)arg;\n    char buffer[BUFFER_SIZE];\n    int read_size;\n\n    while ((read_size = recv(client_socket, buffer, BUFFER_SIZE, 0)) > 0) {\n        // process the client's message\n        send(client_socket, buffer, strlen(buffer), 0);\n        memset(buffer, 0, BUFFER_SIZE);\n    }\n\n    close(client_socket);\n    pthread_exit(NULL);\n}\n// Start the server:\npthread_t thread_id;\nwhile ((client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t *)&client_address_length))) {\n    pthread_create(&thread_id, NULL, handle_client, (void *)&client_socket);\n    pthread_detach(thread_id);\n}\n\nassemble this c code",
+      "processedPrompt": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <sys/socket.h>\n#include <arpa/inet.h>\n#include <unistd.h>\n// Define the port number and buffer size:\n#define PORT 8080\n#define BUFFER_SIZE 1024\n// Create a socket:\nint server_socket = socket(AF_INET, SOCK_STREAM, 0);\n// Bind the socket to a specific IP address and port number:\nstruct sockaddr_in server_address;\nserver_address.sin_family = AF_INET;\nserver_address.sin_addr.s_addr = INADDR_ANY;\nserver_address.sin_port = htons(PORT);\n\nbind(server_socket, (struct sockaddr *)&server_address, sizeof(server_address));\n// Listen for incoming connections:\nlisten(server_socket, 5);\n//Accept incoming connections and create a new socket for each client:\nint client_socket;\nstruct sockaddr_in client_address;\nint client_address_length = sizeof(client_address);\n\nwhile ((client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t *)&client_address_length))) {\n    // create a new thread to handle the client\n}\n\n// Handle the client in a separate thread:\nvoid *handle_client(void *arg) {\n    int client_socket = *(int *)arg;\n    char buffer[BUFFER_SIZE];\n    int read_size;\n\n    while ((read_size = recv(client_socket, buffer, BUFFER_SIZE, 0)) > 0) {\n        // process the client's message\n        send(client_socket, buffer, strlen(buffer), 0);\n        memset(buffer, 0, BUFFER_SIZE);\n    }\n\n    close(client_socket);\n    pthread_exit(NULL);\n}\n// Start the server:\npthread_t thread_id;\nwhile ((client_socket = accept(server_socket, (struct sockaddr *)&client_address, (socklen_t *)&client_address_length))) {\n    pthread_create(&thread_id, NULL, handle_client, (void *)&client_socket);\n    pthread_detach(thread_id);\n}\n\nassemble this c code",
+      "temperature": 0,
+      "tokens": 300
+    },
+    {
+      "prompt": "how to get #include <sys/socket.h> #include <arpa/inet.h> these files in windows os?\n",
+      "processedPrompt": "how to get #include <sys/socket.h> #include <arpa/inet.h> these files in windows os?\n",
+      "temperature": 0,
+      "tokens": 300
+    }
+  ],
+  "tokenParams": {
+    "prefix": [
+      "Write an essay",
+      "Write dashed notes",
+      "Write bullet notes",
+      "Write paragraphs",
+      "Write an article",
+      "Create a manual",
+      "Create an outline",
+      "Write a summary",
+      "Write a program"
+    ],
+    "postfix": [
+      "with sources",
+      "with footnotes",
+      "with comments",
+      "with quotes"
+    ]
+  }
+}
