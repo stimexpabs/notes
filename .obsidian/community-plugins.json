@@ -1,4 +1,5 @@
 [
   "obsidian-git",
-  "gpt3-notes"
+  "obsidian-textgenerator-plugin",
+  "obsidian-latex"
 ]

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md",
+                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md",
+                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md",
+                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md"
+                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md"
               }
             }
           }
@@ -144,12 +144,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "gpt3-notes:GPT-3 Notes": false
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
   "active": "ff1bfdf2a5cb4fb8",
   "lastOpenFiles": [
-    "Data Warehousing and Data Mining(PEC-IT602B)/days2.md",
+    "Data Abstraction.md",
+    "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
+    "Introduction to Database System Architecture.md",
+    "Data Independence.md",
     "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md",
     "New folder"
   ]
