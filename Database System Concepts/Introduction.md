@@ -118,16 +118,66 @@ CREATE TABLE department (
 	budget       numeric(12,2)
 	);
 ```
-	creates the department table with three columns: dept name, building, and budget,
-	each of which has a specific data type associated with it.
+creates the department table with three columns: dept name, building, and budget, each of which has a specific data type associated with it.
 
 - The SQL DDL also supports a number of types of integrity constraints. For example, one can specify that the dept name attribute value is a primary key, ensuring that no two departments can have the same department name. As another example, one can specify that the dept name attribute value appearing in any instructor record must also appear in the dept name attribute of some record of the department table.
 
 ## 1.4.3 Data-Manipulation Language
 
+- A data-manipulation language (DML) is a language that enables users to access or manipulate data as organized by the appropriate data model. The types of access are:
+	- Retrieval of information stored in the database.
+	- Insertion of new information into the database.
+	- Deletion of information from the database.
+	- Modification of information stored in the database.
+- There are basically two types of data-manipulation language:
+	- **Procedural DMLs** require a user to specify what data are needed and how to get those data.
+	- **Declarative DMLs** (also referred to as **nonprocedural DMLs**) require a user to specify what data are needed without specifying how to get those data.
+- Declarative DMLs are usually easier to learn and use than are procedural DMLs. However, since a user does not have to specify how to get the data, the database system has to figure out an efficient means of accessing data.
+- A query is a statement requesting the retrieval of information. The portion of a DML that involves information retrieval is called a query language. Although technically incorrect, it is common practice to use the terms query language and data-manipulation language synonymously.
+- The levels of abstraction that we discussed in Section 1.3 apply not only to defining or structuring data, but also to manipulating data. At the physical level, we must define algorithms that allow efficient access to data. At higher levels of abstraction, we emphasize ease of use. The goal is to allow humans to interact efficiently with the system.
+- The query processor component of the database system (which we study in Chapter 15 and Chapter 16) translates DML queries into sequences of actions at the physical level of the database system.
 
+## 1.4.4 The SQL Data-Manipulation Language
+- The SQL query language is nonprocedural
+- A query takes as input several tables (possibly only one) and always returns a single table
+- an SQL query that finds the names of all instructors in the History department:
+```SQL
+	SELECT instructor.name
+	FROM instructor
+	WHERE instructor.dept_name = 'history';
+```
+The query specifies that those rows from the table instructor where the dept name is History must be retrieved,and the name attribute of these rows must be displayed. The result of executing this query is a table with a single column labelled name and a set of rows, each of which contains the name of an instructor whose dept name is History.
 
+## 1.4.5 Database Access from Application Programs
+The SQL language is not as powerful as a universal Turing machine and lacks the ability to perform certain computations and actions such as input/output and network communication. To overcome this limitation, application programs are used that interact with the database by embedding SQL queries in a host language such as C/C++, Java, or Python. These programs are used for various tasks, such as registering for courses, generating class rosters, calculating student GPA, and generating payroll checks. To execute DML statements, they are sent from the host to the database using an application program interface such as ODBC for C and JDBC for Java.
+# 1.5 Database Design
+- Database systems are essential for managing large amounts of data that are part of an enterprise's operations. The design of a complete database application environment involves several factors, including the database schema, the enterprise's needs, and the end product. In database design, the primary focus is on designing the schema to meet the enterprise's data requirements. A high-level data model provides a conceptual framework for specifying the data requirements and how the database will be structured to fulfill them.
 
+- The initial phase of database design involves characterizing the data needs of the prospective users and developing a specification of user requirements. The next step is to choose a data model and translate the user requirements into a conceptual schema. The conceptual schema provides a detailed overview of the enterprise and includes a review of the schema to ensure that all data requirements are satisfied and that there are no conflicts. In terms of the relational model, the designer decides which attributes to capture in the database and how to group them to form tables. This process can be done using the entity-relationship model or normalization algorithms.
+
+- A fully developed conceptual schema indicates the functional requirements of the enterprise, and users describe the kinds of operations or transactions that will be performed on the data. In the logical-design phase, the designer maps the high-level conceptual schema onto the implementation data model of the database system that will be used. In the subsequent physical-design phase, the designer specifies the physical features of the database, including the form of file organization and internal storage structures.
+
+# 1.6 Database Engine
+- A database engine is a software system designed to manage and manipulate data in a database. The functional components of a database engine can be broadly divided into three categories: the storage manager, the query processor components, and the transaction management component.
+## 1.6.1 Storage manager
+- The storage manager is responsible for storing, retrieving, and updating data in the database. It provides an interface between the low-level data stored in the database and the application programs and queries submitted to the system. The components of the storage manager include an authorization and integrity manager, a transaction manager, a file manager, and a buffer manager.
+	- **Authorization and integrity manager**, which tests for the satisfaction of integrity constraints and checks the authority of users to access data.
+	- **Transaction manager**, which ensures that the database remains in a consistent (correct) state despite system failures, and that concurrent transaction executions proceed without conflicts.
+	- **File manager**, which manages the allocation of space on disk storage and the data structures used to represent information stored on disk.
+	- **Buffer manager**, which is responsible for fetching data from disk storage into main memory, and deciding what data to cache in main memory. The buffer manager is a critical part of the database system, since it enables the database to handle data sizes that are much larger than the size of main memory.
+- The storage manager implements several data structures as part of the physical system implementation:
+	- **Data files**, which store the database itself.
+	- **Data dictionary**, which stores metadata about the structure of the database, in particular the schema of the database.
+	- **Indices**, which can provide fast access to data items. Like the index in this textbook, a database index provides pointers to those data items that hold a particular value. For example, we could use an index to find the instructor record with a particular ID, or all instructor records with a particular name.
+## 1.6.2 The Query Processor
+- The query processor components include:
+	- **DDL interpreter**, which interprets DDL statements and records the definitions in the data dictionary.
+	- **DML compiler**, which translates DML statements in a query language into an evaluation plan consisting of low-level instructions that the query-evaluation engine understands. 
+	
+		A query can usually be translated into any of a number of alternative evaluation plans that all give the same result. The DML compiler also performs **query optimization**; that is, it picks the lowest cost evaluation plan from among the alternatives.
+	- **Query evaluation engine**, which executes low-level instructions generated by the DML compiler.
+## 1.6.3 Transaction Management
+The transaction management component allows application developers to treat a sequence of database accesses as if they were a single unit that either happens in its entirety or not at all. It ensures that the database remains in a consistent (correct) state despite system failures, and that concurrent transaction executions proceed without conflicts. The components of the transaction management component include the transaction manager and the concurrency control manager.
 
 
 
