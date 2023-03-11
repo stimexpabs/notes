@@ -4,8 +4,28 @@
     "type": "split",
     "children": [
       {
+        "id": "e1f5937dfe819350",
+        "type": "tabs",
+        "dimension": 50.958702064896755,
+        "children": [
+          {
+            "id": "39701fe587a28d74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Database System Concepts/Introduction.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
         "id": "1b1793734a3da8bf",
         "type": "tabs",
+        "dimension": 49.041297935103245,
         "children": [
           {
             "id": "ff1bfdf2a5cb4fb8",
@@ -14,8 +34,8 @@
               "type": "markdown",
               "state": {
                 "file": "Database System Concepts/Introduction.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -134,7 +154,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,10 +169,10 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "6fe02e50a80ba046",
+  "active": "39701fe587a28d74",
   "lastOpenFiles": [
-    "Data Mining Techniques Introduction.md",
     "Database System Concepts/Introduction.md",
+    "Data Mining Techniques Introduction.md",
     "Database System Concepts",
     "Data Independence.md",
     "Data Abstraction.md",
