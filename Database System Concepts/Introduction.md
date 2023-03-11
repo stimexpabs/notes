@@ -71,6 +71,7 @@ In the relational model, data are represented in the form of tables. Each table 
 
 ## 1.3.3 Data Abstraction
 Since many database-system users are not computer trained, developers hide the complexity from users through several levels of data abstraction, to simplify users’ interactions with the system:
+![[ThreeLevelsofDataAbstractions.png]]
 - **Physical Level**:
 	The lowest level of abstraction describes how the data are actually stored, it describes complex low-level data structures in detail.
 - **Logical Level**:
@@ -82,4 +83,29 @@ Since many database-system users are not computer trained, developers hide the c
 	-   Database administrators use the logical level of abstraction to decide what information to keep in the database.
 - **View Level**:
 	The highest level of database abstraction is the view level, which describes only a part of the entire database. This level exists to simplify user interaction with the system, as many users only need to access a specific part of the database. The system may provide multiple views for the same database.
+	
+The database system allows application developers to store and retrieve data using the abstractions of the data model, and converts the abstract operations into operations on the low-level implementation
+## 1.3.4 Instances and Schemas
+
+-   A database consists of a schema and one or more instances.
+-   The schema defines the overall structure of the database, while instances contain the actual data at a given moment.
+-   The physical schema describes the physical design of the database, while the logical schema describes its logical structure.
+-   Applications typically use the logical schema, which can be changed without affecting them, providing physical data independence.
+-   Poorly designed schemas can cause problems, such as unnecessarily duplicating information.
+-   Newer database applications often require more flexible logical schemas, allowing for variations in attribute values within a relation.
+
+# 1.4 Database Languages
+-   A database system provides a data-definition language (DDL) to specify the database schema and a data-manipulation language (DML) to express database queries and updates.
+-   In practice, DDL and DML are parts of a single database language, such as SQL.
+-   Almost all relational database systems use the SQL language.
+## 1.4.1 Data-Definition Language
+- We specify a database schema by a set of definitions expressed by a special language called a data-definition language (DDL). The DDL is also used to specify additional properties of the data.
+- We specify the storage structure and access methods used by the database system by a set of statements in a special type of DDL called a data storage and definition language. These statements define the implementation details of the database schemas, which are usually hidden from the users.
+- The data values stored in the database must satisfy certain consistency constraints.
+- Constraints that can be tested with minimal overhead include:
+	- **Domain Constraints**: A domain of possible values must be associated with every attribute.
+	- **Referential Integrity**: A value that appears in one relation for a given set of attributes must also appear in a certain set of attributes in another relation.
+	- **Authorization**: We may want to differentiate among the users as far as the type of access they are permitted to various data values in the database. **read authorization**, which allows reading, but not modification, of data; **insert authorization**, which allows insertion of new data, but not modification of existing data; **update authorization**, which allows modification, but not deletion, of data; and **delete authorization**, which allows deletion of data. We may assign the user all, none, or **a combination of these types of authorization**.
+- The processing of DDL statements generates output that is placed in the data dictionary, which contains metadata about the data. The data dictionary is a special type of table that can be accessed and updated only by the database system itself.
+
 

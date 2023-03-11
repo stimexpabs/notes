@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Database System Concepts/Introduction.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "f40c3585f0e33fdb",
@@ -152,8 +153,11 @@
   },
   "active": "39701fe587a28d74",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Database System Concepts/atcmts/ThreeLevelsofDataAbstractions.png",
     "Database System Concepts/Introduction.md",
+    "Database System Concepts/atcmts",
+    "Pasted image 20230311202416.png",
+    "Untitled.md",
     "Data Mining Techniques Introduction.md",
     "Database System Concepts",
     "Data Independence.md",

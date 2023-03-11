@@ -5,5 +5,8 @@
     "en"
   ],
   "livePreview": false,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "Database System Concepts/atcmts"
 }
