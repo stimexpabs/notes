@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
+                "file": "Data Mining Techniques Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
+                "file": "Data Mining Techniques Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
+                "file": "Data Mining Techniques Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md"
+                "file": "Data Mining Techniques Introduction.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,10 +150,11 @@
   },
   "active": "ff1bfdf2a5cb4fb8",
   "lastOpenFiles": [
+    "Data Independence.md",
+    "Data Mining Techniques Introduction.md",
     "Data Abstraction.md",
     "Data Warehousing and Data Mining(PEC-IT602B)/Course Structure.md",
     "Introduction to Database System Architecture.md",
-    "Data Independence.md",
     "Computer Networks(PCC-CS602)/Computer Networks and the Internet.md",
     "New folder"
   ]

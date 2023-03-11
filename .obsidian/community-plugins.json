@@ -1,5 +1,7 @@
 [
   "obsidian-git",
   "obsidian-textgenerator-plugin",
-  "obsidian-latex"
+  "obsidian-latex",
+  "obsidian-languagetool-plugin",
+  "obsidian-rewarder"
 ]

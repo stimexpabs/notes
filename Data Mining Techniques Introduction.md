@@ -1,0 +1,1 @@
+data mining is a component of a wider process called knowledge discovery from databases, It involves scientists from a wide range of disciplines, including mathematicians, computer scientists, and statisticians, as well as those working in fields such as machine learning, artificial intelligence, information retrieval and pattern recognition.   
