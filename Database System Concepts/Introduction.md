@@ -55,15 +55,30 @@ Underlying the structure of a database is the data model: a collection of concep
 
 3. **Semi-structured Data Model**:
 	-   The semi-structured data model allows for data where items of the same type can have different sets of attributes.
-	-   This is different from other data models where every item of a particular type must have the same attributes.
+	-   This is different from other data models, where every item of a particular type must have the same attributes.
 	-   JSON and XML are popular examples of semi-structured data representations.
 
 4. Object-Based Data Model:
 	-   Object-oriented programming (OOP) has become the dominant software development methodology
-	-   This led to the development of an object-oriented data model
+	- This led to the development of an object-oriented data model
 	-   Today, the concept of objects is well integrated into relational databases
 	-   Standards exist to store objects in relational tables
 	-   Database systems allow procedures to be stored in the database system and executed by the database system
 	-   This extends the relational model with notions of encapsulation, methods, and object identity
 
 ## 1.3.2 Relational Data Model
+In the relational model, data are represented in the form of tables. Each table has multiple columns, and each column has a unique name. Each row of the table represents one piece of information.
+
+## 1.3.3 Data Abstraction
+Since many database-system users are not computer trained, developers hide the complexity from users through several levels of data abstraction, to simplify users’ interactions with the system:
+- **Physical Level**:
+	The lowest level of abstraction describes how the data are actually stored, it describes complex low-level data structures in detail.
+- **Logical Level**:
+	-   Logical level is the next-higher level of abstraction in database design.
+	-   It describes what data are stored in the database and their relationships.
+	-   The logical level uses a small number of relatively simple structures to represent the entire database.
+	-   Complex physical-level structures may be used to implement the logical level, but the user of the logical level does not need to be aware of this complexity.
+	-   This is referred to as physical data independence.
+	-   Database administrators use the logical level of abstraction to decide what information to keep in the database.
+- **View Level**:
+	The highest level of database abstraction is the view level, which describes only a part of the entire database. This level exists to simplify user interaction with the system, as many users only need to access a specific part of the database. The system may provide multiple views for the same database.

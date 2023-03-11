@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Database System Concepts/Introduction.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               }
             }
@@ -152,6 +152,7 @@
   },
   "active": "39701fe587a28d74",
   "lastOpenFiles": [
+    "Untitled.md",
     "Database System Concepts/Introduction.md",
     "Data Mining Techniques Introduction.md",
     "Database System Concepts",
