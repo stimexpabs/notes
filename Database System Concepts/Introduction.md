@@ -71,7 +71,9 @@ In the relational model, data are represented in the form of tables. Each table 
 
 ## 1.3.3 Data Abstraction
 Since many database-system users are not computer trained, developers hide the complexity from users through several levels of data abstraction, to simplify users’ interactions with the system:
-![[ThreeLevelsofDataAbstractions.png]]
+
+![ThreeLevelsofDataAbstractions](https://raw.githubusercontent.com/stimexpabs/notes/496ffd4daccf529b7941f4143edacaf4f6d4f4be/Database%20System%20Concepts/atcmts/ThreeLevelsofDataAbstractions.png)
+
 - **Physical Level**:
 	The lowest level of abstraction describes how the data are actually stored, it describes complex low-level data structures in detail.
 - **Logical Level**:
