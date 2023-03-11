@@ -109,5 +109,24 @@ The database system allows application developers to store and retrieve data usi
 	- **Referential Integrity**: A value that appears in one relation for a given set of attributes must also appear in a certain set of attributes in another relation.
 	- **Authorization**: We may want to differentiate among the users as far as the type of access they are permitted to various data values in the database. **read authorization**, which allows reading, but not modification, of data; **insert authorization**, which allows insertion of new data, but not modification of existing data; **update authorization**, which allows modification, but not deletion, of data; and **delete authorization**, which allows deletion of data. We may assign the user all, none, or **a combination of these types of authorization**.
 - The processing of DDL statements generates output that is placed in the data dictionary, which contains metadata about the data. The data dictionary is a special type of table that can be accessed and updated only by the database system itself.
+## 1.4.2 The SQL Data-Definition Language
+- the following **SQL DDL** statement defines the department table:
+```SQL
+CREATE TABLE department (
+	dept_name    char(20),
+	bulding      char(15),
+	budget       numeric(12,2)
+	);
+```
+	creates the department table with three columns: dept name, building, and budget, each of which has a specific data type associated with it.
+
+- The SQL DDL also supports a number of types of integrity constraints. For example, one can specify that the dept name attribute value is a primary key, ensuring that no two departments can have the same department name. As another example, one can specify that the dept name attribute value appearing in any instructor record must also appear in the dept name attribute of some record of the department table.
+
+## 1.4.3 Data-Manipulation Language
+
+
+
+
+
 
 
