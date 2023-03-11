@@ -82,3 +82,4 @@ Since many database-system users are not computer trained, developers hide the c
 	-   Database administrators use the logical level of abstraction to decide what information to keep in the database.
 - **View Level**:
 	The highest level of database abstraction is the view level, which describes only a part of the entire database. This level exists to simplify user interaction with the system, as many users only need to access a specific part of the database. The system may provide multiple views for the same database.
+
