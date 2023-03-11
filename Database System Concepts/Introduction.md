@@ -4,8 +4,7 @@
 - Database systems are designed to manage large bodies of information.
 - Management of data involves defining structures for storage and providing mechanisms for manipulation.
 - The system must ensure the safety of the information stored and avoid anomalous results if data are shared among several users.
-- Computer scientists have developed concepts and techniques for managing data.
-- This chapter briefly introduces the principles of database systems.
+
 # 1.1 Database-System Applications
 -   Database systems manage collections of valuable, large, and multi-user accessed data.
 -   The earliest database applications were simple compared to modern applications.
