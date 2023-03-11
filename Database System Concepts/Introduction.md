@@ -58,7 +58,7 @@ Underlying the structure of a database is the data model: a collection of concep
 	-   This is different from other data models, where every item of a particular type must have the same attributes.
 	-   JSON and XML are popular examples of semi-structured data representations.
 
-4. Object-Based Data Model:
+4. **Object-Based Data Model**:
 	-   Object-oriented programming (OOP) has become the dominant software development methodology
 	- This led to the development of an object-oriented data model
 	-   Today, the concept of objects is well integrated into relational databases
